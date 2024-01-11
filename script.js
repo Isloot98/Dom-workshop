@@ -16,11 +16,16 @@ const h2 = document.createElement("h2");
 h2.textContent = "New h2 tag added with js!";
 body.appendChild(h2);
 
+
 const list = document.createElement("ul");
 
-const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
-const listItemsElement = document.getElementById("list");
+const createList = () => {
 
-listItemsElement.innerHTML = items.map(item => `<li>${item}</li>`).join("");
-
+    const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+    const listItemsElement = document.getElementById("list");
+    
+    listItemsElement.innerHTML = items.map(item => `<li>${item}</li>`).join("");
+    
+}
+createList();
 h1.remove();
